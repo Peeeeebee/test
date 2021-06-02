@@ -1,0 +1,80 @@
+;ttl minimum window
+show 0
+
+;CRS-1
+HOSTNAME1 = '192.168.222.80'
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+msg = ' Login to People'
+;messagebox msg 'Now Login...'
+
+msg = HOSTNAME1
+connect HOSTNAME1
+
+connect msg
+showtt 0
+wait 'login:'
+wait ''
+sendln 'kddiadm'
+wait 'Password:'
+sendln 'kddiadm'
+wait ''
+
+settitle 'ctc_ctc'
+sendln 'telnet 192.168.12.1'
+++9A++wait 'Username'
+++9A++sendln 'ctc'
+wait 'Password:'
+sendln 'ctc'
+++C++wait '>'
+
+++C++sendln 'enable'
+++C++wait 'Password:'
+++C++sendln 'ctc'
+wait '#'
+
+sendln 'ter len 0'
+wait '#'
+sendln 'ter width 0'
+wait '#'
+;ttl minimum window
+show 0
+
+;CRS-1
+HOSTNAME1 = '192.168.222.80'
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+msg = ' Login to People'
+;messagebox msg 'Now Login...'
+
+msg = HOSTNAME1
+connect HOSTNAME1
+
+connect msg
+showtt 0
+wait 'login:'
+wait ''
+sendln 'kddiadm'
+wait 'Password:'
+sendln 'kddiadm'
+wait ''
+
+settitle 'ctc_ctc'
+sendln 'telnet 192.168.12.2'
+++9A++wait 'Username'
+++9A++sendln 'ctc'
+wait 'Password:'
+sendln 'ctc'
+++C++wait '>'
+
+++C++sendln 'enable'
+++C++wait 'Password:'
+++C++sendln 'ctc'
+wait '#'
+
+sendln 'ter len 0'
+wait '#'
+sendln 'ter width 0'
+wait '#'
